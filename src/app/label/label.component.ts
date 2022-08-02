@@ -28,7 +28,7 @@ export class LabelComponent implements OnInit {
   }
 
   protected onDelete(index: number) {
-    console.log(index);
+    console.log(index, 'test');
     let newLabels = [];
     this.selectedLabels.forEach((label: Lable, labelIndex: number) => {
       index != labelIndex && newLabels.push(label);
@@ -59,7 +59,7 @@ export class LabelComponent implements OnInit {
     console.log(event);
     if (!input.value && event && event.key === 'Backspace') {
       console.log('delete');
-      this.onDelete(this.labels.length - 1);
+      this.onDelete(this.selectedLabels.length - 1);
     } else if (event && event.key === 'Enter') {
       this.onEnter(input);
     } else {
