@@ -1,0 +1,16 @@
+<span class="label" *ngFor="let item of selectedLabels; let i = index">
+  <!-- @TODO Cross icon to be added -->
+  <span class="">{{ item?.name }} <span (click)="onDelete(i)">x</span></span>
+</span>
+<input
+  #input
+  type="text"
+  (keydown)="onValueChange($event, input)"
+  (focus)="onFocus($event)"
+  (blur)="onFocus()"
+/>
+<div *ngIf="isInputFocussed">
+  <div class="list-container" *ngFor="let item of labels; let i = index">
+    <div (click)="onSelect(i, input);">{{ item?.name }}</div>
+  </div>
+</div>

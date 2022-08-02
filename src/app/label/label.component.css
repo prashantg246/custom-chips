@@ -1,0 +1,14 @@
+.label {
+  border: 2px solid;
+}
+
+span {
+  background-color: aqua;
+  border-radius: 1rem;
+  padding: 0.2rem 0.6rem;
+}
+
+.list-container {
+  width: 15rem;
+  background-color: ghostwhite;
+}
